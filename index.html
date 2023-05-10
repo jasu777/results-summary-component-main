@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Results summary component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500&display=swap" rel="stylesheet">
+  
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%);}
+  
+    *
+{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  
+  
+}
+    #main
+  { 
+    display: flex;
+    height: 65vh;
+    width: 46vw;
+    border-radius: 25px;
+    box-shadow: 10px 26px 73px -2px hsl(241, 100%, 89%);
+
+  } 
+  #left
+  { display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vh;
+    line-height: normal;
+    font-family: 'Hanken Grotesk', sans-serif;
+    color: hsl(221, 37%, 75%);
+    text-align: center;
+    background-color:hsl(252, 100%, 67%) ;
+    width:23vw;
+    height: 65vh;
+    border-radius: 25px;
+    
+  }
+  #right
+  { display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Hanken Grotesk', sans-serif;
+    width:23vw;
+    height: 65vh;
+    border-radius: 25px;
+    padding: 9vh;
+}
+#round
+{ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+  font-size: 6vh;
+  width:60% ;
+  height: 40%;
+  line-height: 5vh;
+  padding-top: 3vh;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, hsla(256, 72%, 46%, 1) -8%, hsla(241, 72%, 46%, 0) 119%);
+  margin-top: 5vh;
+}
+#of_100
+{ line-height: normal;
+  font-size: 2vh;
+  color: hsl(221, 37%, 75%);
+}
+#great
+{ color: aliceblue;
+  font-size: 4.5vh;
+  margin-bottom: 30px;
+  line-height:80px;
+}
+#footer
+{
+  font-size:1.7vh;
+  line-height: normal;
+}
+#Reaction
+{
+  text-align: right;
+  background-color: hsl(0, 100%, 98%);
+  width: 19vw;
+  height:6.5vh;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  
+}
+#Memory
+{
+  text-align: right;
+  background-color: hsl(39, 100%, 98%);
+  width: 19vw;
+  height:6.5vh;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#Verbal
+{
+  text-align: right;
+  background-color: hsl(166, 100%, 98%);
+  width: 19vw;
+  height:6.5vh;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+  }
+  #Visual
+  {
+  text-align: right;
+  background-color: hsl(166, 100%, 98%);
+  width: 19vw;
+  height:6.5vh;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#Continue
+  {color: azure;
+  margin-top: 3.5vh;
+  background-color: hsl(224, 30%, 27%);
+  width: 19vw;
+  height:6.5vh;
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+#Continue:hover
+{ background-color: hsl(252, 100%, 67%) ;
+  cursor: pointer;
+}
+
+
+
+.img
+{ margin-right: 8px;
+  margin-left: 8px;
+  float: left;
+}
+
+
+
+.grey
+{
+  color: hsl(221, 37%, 75%);
+  margin-right: 12px;
+}
+#sum
+{ position: relative;
+  right: 6vw;
+  bottom: 2.5vh;
+  font-size: 2.5vh;
+
+  
+}
+  </style>
+</head>
+<body>
+
+<div id="main">
+    <div id="left">
+      <h1>Your result</h1>
+      <div id="round">
+        <h2>76<br><span id="of_100">of 100</span></h2>
+        </div>
+      <h3><span id="great">Great!</span><br>
+        <span id="footer">You scored higher than 65% of<br> the people who have taken<br> these tests.</span></h3>
+    </div>
+    <div id="right">
+     <span id="sum"> Summarry</span>
+      <div id="Reaction"><span><img src="assets/images/icon-reaction.svg"alt="reaction" class="img">
+        <span style="float:left;color: hsl(0, 100%, 67%);">Reaction</span></span><span>80<span class="grey">/100</span></span></div>
+      <div id="Memory"><span><img src="assets/images/icon-memory.svg"alt="reaction" class="img">
+        <span style="float:left;color: hsl(39, 100%, 56%);">Memory</span></span><span>92<span class="grey">/100</span></span></div>
+      <div id="Verbal"><span><img src="assets/images/icon-verbal.svg"alt="verbal" class="img">
+        <span style="float:left;color:hsl(166, 100%, 37%);">Verbal</span></span><span>61<span class="grey">/100</span></span></div>
+      <div id="Visual"><span><img src="assets/images/icon-visual.svg"alt="visual" class="img">
+        <span style="float:left;color:hsl(234, 85%, 45%);">Visual</span></span><span>72<span class="grey">/100</span></span></div>
+    <div id="Continue">Continue</div>
+      </div>
+
+</div>
+  <!--
+    76
+  of 100
+
+  Great
+  You scored higher than 65% of the people who have taken these tests.
+  
+  Summary
+
+  Reaction
+  80 / 100
+
+  Memory
+  92 / 100
+
+  Verbals
+  61 / 100
+
+  Visual
+  72 / 100
+
+  Continue
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> 
+-->
+</body>
+</html>
